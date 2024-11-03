@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Images/Rock-Paper-Scissors-logo.avif" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <!-- Below are the buttons that allow you to select rock, paper of scissors. I use onclick="playGame" to connect my html button code to the JS functionality. The img elements inside the buttons are serving as the display for the button elements. -->
+    <div class="choices">
+      <button onclick="playGame('rock')">
+        <img src="Images/Rock-monster.png" alt="img-of-rock" />
+      </button>
+      <button onclick="playGame('paper')">
+        <img src="Images/Paper-man.png" alt="img-of-paper" />
+      </button>
+      <button onclick="playGame('scissors')">
+        <img src="Images/Scissors-bro.png" alt="img-of-scissors" />
+      </button>
+    </div>
+
+    <!-- Below are the divs that contain player:, computer: and the empty result div.
+     these divs all have id's which connect to the JS using the DOM(Document Object Model) We will use this to show what option you picked as well as the random option that the computer picked. The result div will give you a discription if you win, lose or get a tie.  -->
+    <div id="playerDisplay">Player:</div>
+    <div id="computerDisplay">Computer:</div>
+    <div id="resultDisplay"></div>
+
+    <!-- Below are the divs that contain our playerScoreDisplay, computerScoreDisplay and tieScoreDisplay.
+     these divs all have id's which connect to the JS using the DOM(Document Object Model) We will use this to show what the score is after every selection made.  -->
+    <div class="scoreDisplay">
+      Player Score:
+      <span id="playerScoreDisplay">0</span>
+    </div>
+    <div class="scoreDisplay">
+      Computer Score:
+      <span id="computerScoreDisplay">0</span>
+    </div>
+    <div class="scoreDisplay">
+      Ties:
+      <span id="tieScoreDisplay">0</span>
+    </div>
+    <!-- Below is a reset game button that I linked back to the index.html page so that the button would reload the page whenever the useer clicks it.  -->
+    <a href="index.html"><button>RESET GAME</button></a>
+    <audio id="music" autoplay loop>
+      <!-- <source src="Audio/Satin Sugar - Huma-Huma.mp3" /> -->
+    </audio>
+    <!-- Below is the script html element which will link our html to our JS file. -->
+    <script src="script.js"></script>
+  </body>
+</html>

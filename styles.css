@@ -1,0 +1,82 @@
+/* Below is the font that I pulled from google fonts, I will be using this within my page. */
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Georama:ital,wght@0,100..900;1,100..900&family=Honk&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* The box-sizing: border-box; makes it so that the width and height of all elements are calculated the same sense I used the universal selector. In turn removing any extra width or height space.*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkblue;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Honk", system-ui;
+}
+
+/* Creates 30px of space between the options that you can select and your player and computer choice. */
+.choices {
+  margin-bottom: 30px;
+}
+
+/* Manipulates the effects of your buttons within your choice class. 7.5rem(root em) is used to define the font size relative to the root element of the document. In this case the root element is the <html></html> element. */
+.choices button {
+  font-size: 7.5rem;
+  min-width: 160px;
+  margin: 0 10px;
+  border-radius: 250px;
+  background-color: lightblue;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+/* When I hover over the choices the backgrounbd color will turn red. */
+.choices button:hover {
+  background-color: red;
+}
+
+#playerDisplay,
+#computerDisplay {
+  font-size: 2.5rem;
+  font-family: "Honk", system-ui;
+}
+
+#resultDisplay {
+  font-size: 5rem;
+  margin: 30px 0;
+  font-family: "Honk", system-ui;
+}
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 250px;
+  cursor: pointer;
+}
+
+.scoreDisplay {
+  font-size: 2rem;
+  font-family: "Honk", system-ui;
+}
+
+/* The styling for the reset button  */
+a button {
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  box-shadow: 10px 5px 5px lightblue;
+  font-family: "Honk", system-ui;
+  height: 80px;
+  width: 200px;
+  transition: 0.5s ease;
+}
+
+a button:hover {
+  background-color: red;
+  box-shadow: 10px 5px 5px red;
+}
